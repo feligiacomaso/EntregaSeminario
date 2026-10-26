@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">FilmWish</string>
+    <string name="popular">Populares</string>
+    <string name="trending">Tendencias</string>
+    <string name="watchlist">Deseados</string>
+    <string name="search_hint">Buscar películas</string>
+    <string name="clear_search_action">Limpiar búsqueda</string>
+    <string name="empty_search">No hay resultados para esta búsqueda</string>
+    <string name="empty_list">No hay películas para mostrar</string>
+    <string name="empty_watchlist">Tu lista está vacía. Descubrí películas para agregar.</string>
+    <string name="retry">Reintentar</string>
+    <string name="loading">Cargando…</string>
+    <string name="missing_token">Configurá TMDB_READ_ACCESS_TOKEN en local.properties para consultar TMDB.</string>
+    <string name="overview_missing">Sinopsis no disponible.</string>
+    <string name="genres">Géneros</string>
+    <string name="similar">Películas similares</string>
+    <string name="recommendations">Recomendadas</string>
+    <string name="add_watchlist">Agregar a deseados</string>
+    <string name="remove_watchlist">Quitar de deseados</string>
+    <string name="share">Compartir</string>
+    <string name="homepage">Sitio oficial</string>
+    <string name="homepage_error">No se pudo abrir el sitio web.</string>
+    <string name="share_error">No se pudo abrir el menú para compartir.</string>
+    <string name="rating">Puntuación</string>
+</resources>
+
+
