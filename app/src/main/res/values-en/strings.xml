@@ -22,6 +22,7 @@
     <string name="homepage_error">Could not open the website.</string>
     <string name="share_error">Could not open the share menu.</string>
     <string name="rating">Rating</string>
+    <string name="rating_value">%1$.1</string>
 </resources>
 
 

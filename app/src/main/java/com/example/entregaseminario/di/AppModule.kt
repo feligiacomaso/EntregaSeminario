@@ -1,3 +1,5 @@
+@file:Suppress("unused")
+
 package com.example.entregaseminario.di
 
 import android.app.Application

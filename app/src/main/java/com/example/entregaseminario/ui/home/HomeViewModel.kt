@@ -22,6 +22,7 @@ import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
+import kotlin.time.Duration.Companion.milliseconds
 import javax.inject.Inject
 
 @OptIn(FlowPreview::class, ExperimentalCoroutinesApi::class)
@@ -37,7 +38,7 @@ class HomeViewModel @Inject constructor(
 
     val searchResults = query
         .map { it.trim() }
-        .debounce(350)
+        .debounce(350.milliseconds)
         .distinctUntilChanged()
         .onEach { _settledQuery.value = it }
         .flatMapLatest { q ->

@@ -45,7 +45,7 @@ fun FilmWishNavigation() {
                         stringResource(R.string.trending),
                         stringResource(R.string.watchlist)
                     )
-                    Section.values().forEachIndexed { index, section ->
+                    Section.entries.forEachIndexed { index, section ->
                         val icon = when (section) {
                             Section.Popular -> R.drawable.ic_star
                             Section.Trending -> R.drawable.ic_electric_bolt

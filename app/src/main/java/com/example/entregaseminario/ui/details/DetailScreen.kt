@@ -46,6 +46,8 @@ fun DetailScreen(
     onMovie: (Int) -> Unit
 ) {
     val context = LocalContext.current
+    val shareError = stringResource(R.string.share_error)
+    val homepageError = stringResource(R.string.homepage_error)
     val state by vm.details.collectAsStateWithLifecycle()
     val similar by vm.similar.collectAsStateWithLifecycle()
     val recommendations by vm.recommendations.collectAsStateWithLifecycle()
@@ -86,11 +88,8 @@ fun DetailScreen(
                             if (movie.rating > 0.0) {
                                 Text(
                                     stringResource(R.string.rating) + "  ★ " +
-                                        String.format(
-                                            Locale.getDefault(),
-                                            "%.1f",
-                                            movie.rating
-                                        ),
+                                        stringResource(R.string.rating_value , movie.rating)
+,
                                     color = MaterialTheme.colorScheme.secondary,
                                     modifier = Modifier.padding(top = 8.dp)
                                 )
@@ -148,7 +147,7 @@ fun DetailScreen(
                                         }.onFailure {
                                             Toast.makeText(
                                                 context,
-                                                context.getString(R.string.share_error),
+                                                shareError,
                                                 Toast.LENGTH_SHORT
                                             ).show()
                                         }
@@ -175,7 +174,7 @@ fun DetailScreen(
                                             }.onFailure {
                                                 Toast.makeText(
                                                     context,
-                                                    context.getString(R.string.homepage_error),
+                                                    homepageError,
                                                     Toast.LENGTH_SHORT
                                                 ).show()
                                             }
