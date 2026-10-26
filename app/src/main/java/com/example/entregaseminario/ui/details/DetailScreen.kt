@@ -88,8 +88,7 @@ fun DetailScreen(
                             if (movie.rating > 0.0) {
                                 Text(
                                     stringResource(R.string.rating) + "  ★ " +
-                                        stringResource(R.string.rating_value , movie.rating)
-,
+                                        stringResource(R.string.rating_value, movie.rating),
                                     color = MaterialTheme.colorScheme.secondary,
                                     modifier = Modifier.padding(top = 8.dp)
                                 )
